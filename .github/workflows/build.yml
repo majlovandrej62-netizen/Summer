@@ -11,6 +11,8 @@ jobs:
         rm -rf $HOME/theos/sdks
         git clone https://github.com/theos/sdks.git $HOME/theos/sdks
         echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+    - name: Install ldid
+      run: brew install ldid
     - name: Compile
       run: |
         mkdir -p oxide
